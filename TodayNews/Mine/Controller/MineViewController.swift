@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class MineViewController: UITableViewController {
+class MineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,15 @@ class MineViewController: UITableViewController {
         }
         // Do any additional setup after loading the view.
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
 }
 
 extension MineViewController {
     
-    tableview
+    
     
     
 }
