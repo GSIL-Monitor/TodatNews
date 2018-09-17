@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class MineViewController: UITableViewController {
+class MineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class MineViewController: UITableViewController {
 
 extension MineViewController {
     
-    tableview
+    
     
     
 }
