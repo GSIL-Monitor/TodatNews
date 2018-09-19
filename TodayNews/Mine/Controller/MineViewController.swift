@@ -13,12 +13,11 @@ class MineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkTool.loadRelationFollow { (string) in
+        NetworkTool.loadMineModel { (string) in
             print("\(string)")
         }
         // Do any additional setup after loading the view.
-    }
-    
+    }    
 
 }
 
