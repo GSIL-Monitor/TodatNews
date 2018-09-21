@@ -2,12 +2,11 @@
 //  MyCellModel.swift
 //  TodayNews
 //
-//  Created by tupservice on 2018/9/19.
+//  Created by xun wang on 2018/9/20.
 //  Copyright © 2018年 huawei. All rights reserved.
 //
 
-
-import Foundation
+import UIKit
 import HandyJSON
 
 
