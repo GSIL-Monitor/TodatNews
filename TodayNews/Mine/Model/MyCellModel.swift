@@ -19,3 +19,25 @@ struct MyCellModel: HandyJSON {
     var tip_new:Int = 0
     
 }
+struct MyConner :HandyJSON {
+    var description:String = ""
+    var url:String = ""
+    var tips:Bool = false
+    var icon:String = ""
+    var type:String = ""
+    var name:String = ""
+    var media_id:Bool = false
+    var userid:Int = 0
+    var time:String = ""
+    var is_verify:Bool = false
+    var user_auth_info:String = ""
+    var userAuthInfo:UserAuthInfo?{
+        return UserAuthInfo.deserialize(from: user_auth_info)
+    }
+    
+    var id:Int=0
+}
+struct UserAuthInfo :HandyJSON{
+    var auth_type:String = ""
+    var auth_info:String = ""
+}

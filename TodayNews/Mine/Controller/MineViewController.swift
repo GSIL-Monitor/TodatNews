@@ -9,12 +9,18 @@
 import UIKit
 import Alamofire
 
-class MineViewController: UIViewController {
+class MineViewController: UITableViewController {
+    var sections = [[MyCellModel]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
         NetworkTool.loadMineModel { (string) in
-            print("\(string)")
+            self.sections = string
+            self.tableView.reloadData()
+        }
+        NetworkTool.loadMineConner { (response) in
+            print("\(response)")
         }
         // Do any additional setup after loading the view.
     }    
@@ -23,6 +29,21 @@ class MineViewController: UIViewController {
 
 extension MineViewController {
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections[section].count
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(UITableViewCell.self), for: indexPath)
+        let model = sections[indexPath.section][indexPath.row]
+        cell.textLabel?.text = model.text
+        cell.detailTextLabel?.text = model.grey_text
+        return cell
+    }
     
     
     

@@ -16,18 +16,18 @@ struct NetworkTool :NetworkToolProtocol {}
 protocol NetworkToolProtocol {
     
     //我的界面模块
-    static func loadMineModel(_ completionHandler:@escaping (_ mymodel:[MyCellModel])->())
+    static func loadMineModel(_ completionHandler:@escaping (_ mymodel:[[MyCellModel]])->())
     ///mine 关注
-    static func loadRelationFollow(_ completionHandler:@escaping (_ attion :String)-> ())
+    static func loadMineConner(_ completionHandler:@escaping (_ attion :[MyConner])-> ())
 
 }
 extension NetworkToolProtocol
 {
     
    
-    static func loadMineModel(_ completionHandler:@escaping (_ mymodel:[MyCellModel])->())
+    static func loadMineModel(_ completionHandler:@escaping (_ mymodel:[[MyCellModel]])->())
     {
-        var titles = [MyCellModel]()
+        var title = [[MyCellModel]]()
         let BASE_URL = "https://is.snssdk.com"
         let device_id: Int = 6096495334
         //        let iid: Int = 5034850950
@@ -38,27 +38,42 @@ extension NetworkToolProtocol
                 guard json["message"] == "success" else {
                     return
                 }
-                if let data = json["data"].dictionary {
-                    if let sections = data["sections"]?.arrayObject {
-                        completionHandler(sections.flatMap({ item in
-                            .flatMap({ row in
-                                MyCellModel.deserialize(from: row as? NSDictionary)
+                let myConcer = "{\"grey_text\":\"\",\"text\":\"我的关注\"}"
+                title.append([MyCellModel.deserialize(from: myConcer)!])
+                if let data = json["data"].dictionary{
+                    if let sections = data["sections"]?.arrayObject{
+                        title += sections.flatMap({ item in
+                            (item as! [Any]).flatMap({
+                                MyCellModel.deserialize(from: $0 as? Dictionary)
                             })
-                        }))
+                        })
                     }
+                    
                 }
+                completionHandler(title)
+                
             }
+        }
+        
     }
             
     
-    static func loadRelationFollow(_ completionHandler: @escaping (_ attion :String)-> ())
+    static func loadMineConner(_ completionHandler: @escaping (_ attion :[MyConner])-> ())
     {
         
+        var myconner = [MyConner]()
         let BASE_URL = "https://is.snssdk.com"
         let device_id: Int = 6096495334
         let url = BASE_URL + "/concern/v2/follow/my_follow/?device_id=" + "\(device_id)"
-        Alamofire.request(url).responseJSON { (string) in
-            completionHandler(string.description)
+        Alamofire.request(url).responseJSON { (response) in
+            let json = JSON(response.result.value!)
+            if let data = json["data"].arrayObject{
+                myconner += data.flatMap({ item in
+                    MyConner.deserialize(from: item as? Dictionary)
+                })
+            }
+            completionHandler(myconner)
+            
         }
         
     
