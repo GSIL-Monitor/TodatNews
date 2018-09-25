@@ -8,17 +8,22 @@
 
 import UIKit
 
-class MineConnerCell: UITableViewCell {
+class MineConnerCell: UICollectionViewCell {
 
+    @IBOutlet weak var imageV: UIImageView!
+    @IBOutlet weak var nameLab: UILabel!
+    
+    var myConner = MyConner(){
+        didSet{
+            imageV.image = UIImage(named: myConner.icon)
+            nameLab.text = myConner.name
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+   
+    
     
 }

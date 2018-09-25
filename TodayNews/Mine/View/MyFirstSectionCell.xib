@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="MyFirstSectionCell" customModule="TodayNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="289" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aih-d0-a1h">
+                        <rect key="frame" x="8" y="8" width="273" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的关注" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXm-gb-mND">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="dqk-QP-Mvi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBi-Fh-kaw">
+                                <rect key="frame" x="183" y="5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="QpI-DZ-rZP"/>
+                                    <constraint firstAttribute="height" constant="30" id="wec-Db-vcR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raS-0S-nch">
+                                <rect key="frame" x="243" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="MpU-0K-Em5"/>
+                                    <constraint firstAttribute="height" constant="20" id="RTF-vs-nLh"/>
+                                </constraints>
+                                <state key="normal" image="setting_rightarrow_8x14_"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="raS-0S-nch" firstAttribute="centerY" secondItem="LBi-Fh-kaw" secondAttribute="centerY" id="D2C-do-p43"/>
+                            <constraint firstAttribute="trailing" secondItem="LBi-Fh-kaw" secondAttribute="trailing" constant="60" id="ET3-OA-kDR"/>
+                            <constraint firstItem="qXm-gb-mND" firstAttribute="top" secondItem="aih-d0-a1h" secondAttribute="top" id="HF7-do-3yi"/>
+                            <constraint firstItem="qXm-gb-mND" firstAttribute="leading" secondItem="aih-d0-a1h" secondAttribute="leading" id="INY-g1-Zy3"/>
+                            <constraint firstAttribute="height" constant="40" id="JLn-b4-Tz3"/>
+                            <constraint firstAttribute="bottom" secondItem="qXm-gb-mND" secondAttribute="bottom" id="Pmb-eT-z7i"/>
+                            <constraint firstAttribute="trailing" secondItem="raS-0S-nch" secondAttribute="trailing" constant="10" id="Z2x-uM-yYP"/>
+                            <constraint firstItem="LBi-Fh-kaw" firstAttribute="centerY" secondItem="aih-d0-a1h" secondAttribute="centerY" id="fJM-P7-sfk"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NJL-7a-esD">
+                        <rect key="frame" x="0.0" y="48" width="289" height="58.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y7n-UO-8vm">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="NJL-7a-esD" secondAttribute="trailing" id="CdJ-2a-heL"/>
+                    <constraint firstItem="aih-d0-a1h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="HeB-0M-5Lf"/>
+                    <constraint firstItem="aih-d0-a1h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Qtp-vN-rSL"/>
+                    <constraint firstItem="NJL-7a-esD" firstAttribute="top" secondItem="aih-d0-a1h" secondAttribute="bottom" id="meS-CV-xR5"/>
+                    <constraint firstItem="NJL-7a-esD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w0l-Lw-xwd"/>
+                    <constraint firstAttribute="bottom" secondItem="NJL-7a-esD" secondAttribute="bottom" id="w9g-4l-ttD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aih-d0-a1h" secondAttribute="trailing" id="yti-Q1-d9V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionV" destination="NJL-7a-esD" id="0No-Jk-FrD"/>
+                <outlet property="imageV" destination="LBi-Fh-kaw" id="h9T-F8-Q8c"/>
+            </connections>
+            <point key="canvasLocation" x="-16.5" y="33.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="setting_rightarrow_8x14_" width="8" height="14"/>
+    </resources>
+</document>
