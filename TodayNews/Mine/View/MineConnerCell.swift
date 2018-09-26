@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
-class MineConnerCell: UICollectionViewCell {
+class MineConnerCell: UICollectionViewCell,RegisterCellFromNib{
 
     @IBOutlet weak var imageV: UIImageView!
     @IBOutlet weak var nameLab: UILabel!
     
     var myConner = MyConner(){
         didSet{
-            imageV.image = UIImage(named: myConner.icon)
+            imageV.kf.setImage(with: URL(string: (myConner.icon)))
             nameLab.text = myConner.name
         }
     }

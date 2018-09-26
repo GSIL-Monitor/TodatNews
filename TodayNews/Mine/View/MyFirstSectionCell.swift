@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyFirstSectionCell: UITableViewCell {
+class MyFirstSectionCell: UITableViewCell,RegisterCellFromNib {
     
     var array = [MyConner](){
         didSet {
@@ -22,8 +22,7 @@ class MyFirstSectionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let nib = UINib(nibName: "MineConnerCell", bundle: nil)
-        collectionV.register(nib, forCellWithReuseIdentifier: "MineConnerCell")
+        collectionV.ym_registerCell(cell: MineConnerCell.self)
         collectionV.delegate = self
         collectionV.dataSource = self
         collectionV.collectionViewLayout = MyConnerFlowLayout()
@@ -46,7 +45,7 @@ extension MyFirstSectionCell :UICollectionViewDataSource,UICollectionViewDelegat
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MineConnerCell", for: indexPath) as! MineConnerCell
+        let cell = collectionView.ym_dequeueReuseableCell(indexPath: indexPath) as MineConnerCell
         cell.myConner = array[indexPath.row]
         return cell
     }
