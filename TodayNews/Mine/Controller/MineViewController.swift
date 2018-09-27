@@ -12,9 +12,12 @@ import Alamofire
 class MineViewController: UITableViewController {
     var sections = [[MyCellModel]]()
     var myConner = [MyConner]()
+    lazy var headView = NotloginMineHeadView.loadViewFromNib()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableHeaderView = headView
+        tableView.tableFooterView = UIView()
         tableView.ym_registerCell(cell: MyFirstSectionCell.self)
         tableView.ym_registerCell(cell: MyOtherCell.self)
         NetworkTool.loadMineModel { (string) in

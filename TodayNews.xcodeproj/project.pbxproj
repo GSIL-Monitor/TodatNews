@@ -22,6 +22,12 @@
 		4158035D214906FA00D35CB2 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4158035C214906FA00D35CB2 /* NetworkTool.swift */; };
 		41580519214A058200D35CB2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4158050C214A056600D35CB2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4158051A214A058200D35CB2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4158050C214A056600D35CB2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41B47B13215C829800BFCA4C /* NotloginMineHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B47B12215C829800BFCA4C /* NotloginMineHeadView.swift */; };
+		41B47B35215C82BE00BFCA4C /* NotloginMineHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B47B34215C82BE00BFCA4C /* NotloginMineHeadView.xib */; };
+		41B47B3F215CB8CA00BFCA4C /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B47B3E215CB8A800BFCA4C /* IBAnimatable.framework */; };
+		41B47B40215CB8CA00BFCA4C /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41B47B3E215CB8A800BFCA4C /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41B47B44215CD73B00BFCA4C /* MoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B47B43215CD73B00BFCA4C /* MoreLoginViewController.swift */; };
+		41B47B46215CD77500BFCA4C /* MoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B47B45215CD77500BFCA4C /* MoreLoginViewController.storyboard */; };
 		41E286EC2147BC9C000AB593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41E286EB2147BC9C000AB593 /* Assets.xcassets */; };
 		41E286EF2147BC9C000AB593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E286ED2147BC9C000AB593 /* LaunchScreen.storyboard */; };
 		41F3F9C8215B2607002A86B1 /* MyFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F3F9B6215B2607002A86B1 /* MyFirstSectionCell.swift */; };
@@ -151,6 +157,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
 			remoteInfo = "SwiftyJSON iOS";
+		};
+		41B47B3B215CB8A800BFCA4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B47B36215CB8A600BFCA4C /* IBAnimatable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE6C66FF1BFBF93500134A35;
+			remoteInfo = IBAnimatableApp;
+		};
+		41B47B3D215CB8A800BFCA4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B47B36215CB8A600BFCA4C /* IBAnimatable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE6B01551C2A082300950BB2;
+			remoteInfo = IBAnimatable;
+		};
+		41B47B41215CB8CA00BFCA4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B47B36215CB8A600BFCA4C /* IBAnimatable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AE6B01541C2A082300950BB2;
+			remoteInfo = IBAnimatable;
 		};
 		41F3F9D9215B62D0002A86B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -325,6 +352,7 @@
 				4158051A214A058200D35CB2 /* Alamofire.framework in Embed Frameworks */,
 				41F3F9EA215B62DD002A86B1 /* HandyJSON.framework in Embed Frameworks */,
 				41F3FA79215B8480002A86B1 /* Kingfisher.framework in Embed Frameworks */,
+				41B47B40215CB8CA00BFCA4C /* IBAnimatable.framework in Embed Frameworks */,
 				41F3F9EE215B62E2002A86B1 /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -348,6 +376,11 @@
 		4158035C214906FA00D35CB2 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		41580500214A056500D35CB2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Third-Part/Alamofire-master/Alamofire.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4158051F214A387F00D35CB2 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "Third-Part/SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		41B47B12215C829800BFCA4C /* NotloginMineHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotloginMineHeadView.swift; sourceTree = "<group>"; };
+		41B47B34215C82BE00BFCA4C /* NotloginMineHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotloginMineHeadView.xib; sourceTree = "<group>"; };
+		41B47B36215CB8A600BFCA4C /* IBAnimatable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatable.xcodeproj; path = "Third-Part/IBAnimatable-4.0.0/IBAnimatable.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		41B47B43215CD73B00BFCA4C /* MoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginViewController.swift; sourceTree = "<group>"; };
+		41B47B45215CD77500BFCA4C /* MoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreLoginViewController.storyboard; sourceTree = "<group>"; };
 		41E286E12147BC9C000AB593 /* TodayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E286EB2147BC9C000AB593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41E286EE2147BC9C000AB593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -370,6 +403,7 @@
 				41580519214A058200D35CB2 /* Alamofire.framework in Frameworks */,
 				41F3F9E9215B62DD002A86B1 /* HandyJSON.framework in Frameworks */,
 				41F3FA78215B8480002A86B1 /* Kingfisher.framework in Frameworks */,
+				41B47B3F215CB8CA00BFCA4C /* IBAnimatable.framework in Frameworks */,
 				41F3F9ED215B62E2002A86B1 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +574,10 @@
 				41F3F9C6215B2607002A86B1 /* MyFirstSectionCell.xib */,
 				41F3F9F1215B6D10002A86B1 /* MyOtherCell.swift */,
 				41F3F9F2215B6D10002A86B1 /* MyOtherCell.xib */,
+				41B47B12215C829800BFCA4C /* NotloginMineHeadView.swift */,
+				41B47B34215C82BE00BFCA4C /* NotloginMineHeadView.xib */,
+				41B47B43215CD73B00BFCA4C /* MoreLoginViewController.swift */,
+				41B47B45215CD77500BFCA4C /* MoreLoginViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -622,6 +660,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		41B47B37215CB8A600BFCA4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41B47B3C215CB8A800BFCA4C /* IBAnimatableApp.app */,
+				41B47B3E215CB8A800BFCA4C /* IBAnimatable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		41E286D82147BC9C000AB593 = {
 			isa = PBXGroup;
 			children = (
@@ -642,6 +689,7 @@
 		41E286E32147BC9C000AB593 /* TodayNews */ = {
 			isa = PBXGroup;
 			children = (
+				41B47B36215CB8A600BFCA4C /* IBAnimatable.xcodeproj */,
 				41F3FA51215B846C002A86B1 /* Kingfisher.xcodeproj */,
 				41F3F9CE215B62D0002A86B1 /* HandyJSON.xcodeproj */,
 				4158051F214A387F00D35CB2 /* SwiftyJSON.xcodeproj */,
@@ -716,6 +764,7 @@
 				41F3F9EC215B62DD002A86B1 /* PBXTargetDependency */,
 				41F3F9F0215B62E2002A86B1 /* PBXTargetDependency */,
 				41F3FA7B215B8480002A86B1 /* PBXTargetDependency */,
+				41B47B42215CB8CA00BFCA4C /* PBXTargetDependency */,
 			);
 			name = TodayNews;
 			productName = TodayNews;
@@ -757,6 +806,10 @@
 				{
 					ProductGroup = 41F3F9CF215B62D0002A86B1 /* Products */;
 					ProjectRef = 41F3F9CE215B62D0002A86B1 /* HandyJSON.xcodeproj */;
+				},
+				{
+					ProductGroup = 41B47B37215CB8A600BFCA4C /* Products */;
+					ProjectRef = 41B47B36215CB8A600BFCA4C /* IBAnimatable.xcodeproj */;
 				},
 				{
 					ProductGroup = 41F3FA52215B846C002A86B1 /* Products */;
@@ -871,6 +924,20 @@
 			fileType = wrapper.cfbundle;
 			path = "SwiftyJSON tvOS Tests.xctest";
 			remoteRef = 4158053D214A388000D35CB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41B47B3C215CB8A800BFCA4C /* IBAnimatableApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = IBAnimatableApp.app;
+			remoteRef = 41B47B3B215CB8A800BFCA4C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41B47B3E215CB8A800BFCA4C /* IBAnimatable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IBAnimatable.framework;
+			remoteRef = 41B47B3D215CB8A800BFCA4C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		41F3F9DA215B62D0002A86B1 /* HandyJSON.framework */ = {
@@ -1020,9 +1087,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B47B35215C82BE00BFCA4C /* NotloginMineHeadView.xib in Resources */,
 				41E286EF2147BC9C000AB593 /* LaunchScreen.storyboard in Resources */,
 				41E286EC2147BC9C000AB593 /* Assets.xcassets in Resources */,
 				41F3F9CB215B2607002A86B1 /* MineConnerCell.xib in Resources */,
+				41B47B46215CD77500BFCA4C /* MoreLoginViewController.storyboard in Resources */,
 				41F3F9CA215B2607002A86B1 /* MyFirstSectionCell.xib in Resources */,
 				41F3F9F4215B6D10002A86B1 /* MyOtherCell.xib in Resources */,
 				415803472148B1AF00D35CB2 /* Info.plist in Resources */,
@@ -1049,8 +1118,10 @@
 				4158034B2148B2EF00D35CB2 /* MyNavController.swift in Sources */,
 				415803512148E0C700D35CB2 /* HomeViewController.swift in Sources */,
 				4158035B2148EA6800D35CB2 /* MyTabBar.swift in Sources */,
+				41B47B44215CD73B00BFCA4C /* MoreLoginViewController.swift in Sources */,
 				41F3F9C9215B2607002A86B1 /* MineConnerCell.swift in Sources */,
 				415803592148E18500D35CB2 /* VideoViewController.swift in Sources */,
+				41B47B13215C829800BFCA4C /* NotloginMineHeadView.swift in Sources */,
 				415803572148E14200D35CB2 /* PublishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1067,6 +1138,11 @@
 			isa = PBXTargetDependency;
 			name = "SwiftyJSON iOS";
 			targetProxy = 41580541214A38A100D35CB2 /* PBXContainerItemProxy */;
+		};
+		41B47B42215CB8CA00BFCA4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBAnimatable;
+			targetProxy = 41B47B41215CB8CA00BFCA4C /* PBXContainerItemProxy */;
 		};
 		41F3F9EC215B62DD002A86B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

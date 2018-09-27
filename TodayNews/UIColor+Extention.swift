@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol NibLoadable{}
+extension NibLoadable{
+    static func loadViewFromNib() ->Self{
+        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! Self
+    }
+}
+
 extension UIColor{
    class func globalColor() -> UIColor {
         return UIColor(red: 245/255.0, green: 93/255.0, blue: 245/255.0, alpha: 1.0)
