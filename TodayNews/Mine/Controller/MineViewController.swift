@@ -64,6 +64,12 @@ extension MineViewController {
         }
        
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3 && indexPath.row == 1 {
+            let vc = MySettingTableViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     
     
