@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4127D7F4215DDA9E00E7D732 /* MySetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4127D7F3215DDA9E00E7D732 /* MySetting.plist */; };
+		4127D819215DDC0C00E7D732 /* MySettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127D818215DDC0C00E7D732 /* MySettingModel.swift */; };
+		4127D81B215DDD7400E7D732 /* MySettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127D81A215DDD7400E7D732 /* MySettingTableViewController.swift */; };
+		4127D81E215E04E200E7D732 /* MySettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127D81C215E04E200E7D732 /* MySettingCell.swift */; };
+		4127D81F215E04E200E7D732 /* MySettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4127D81D215E04E200E7D732 /* MySettingCell.xib */; };
 		415803462148B1AF00D35CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415803402148B1AF00D35CB2 /* AppDelegate.swift */; };
 		415803472148B1AF00D35CB2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 415803412148B1AF00D35CB2 /* Info.plist */; };
 		415803492148B2C900D35CB2 /* MainBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415803482148B2C900D35CB2 /* MainBarController.swift */; };
@@ -361,6 +366,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4127D7F3215DDA9E00E7D732 /* MySetting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MySetting.plist; sourceTree = "<group>"; };
+		4127D818215DDC0C00E7D732 /* MySettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySettingModel.swift; sourceTree = "<group>"; };
+		4127D81A215DDD7400E7D732 /* MySettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySettingTableViewController.swift; sourceTree = "<group>"; };
+		4127D81C215E04E200E7D732 /* MySettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySettingCell.swift; sourceTree = "<group>"; };
+		4127D81D215E04E200E7D732 /* MySettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySettingCell.xib; sourceTree = "<group>"; };
 		415803402148B1AF00D35CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		415803412148B1AF00D35CB2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		415803482148B2C900D35CB2 /* MainBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarController.swift; sourceTree = "<group>"; };
@@ -553,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				415803542148E12C00D35CB2 /* MineViewController.swift */,
+				4127D81A215DDD7400E7D732 /* MySettingTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -561,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				41F3F9CC215B2611002A86B1 /* MyCellModel.swift */,
+				4127D818215DDC0C00E7D732 /* MySettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -578,6 +590,8 @@
 				41B47B34215C82BE00BFCA4C /* NotloginMineHeadView.xib */,
 				41B47B43215CD73B00BFCA4C /* MoreLoginViewController.swift */,
 				41B47B45215CD77500BFCA4C /* MoreLoginViewController.storyboard */,
+				4127D81C215E04E200E7D732 /* MySettingCell.swift */,
+				4127D81D215E04E200E7D732 /* MySettingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +601,7 @@
 			children = (
 				415803402148B1AF00D35CB2 /* AppDelegate.swift */,
 				415803412148B1AF00D35CB2 /* Info.plist */,
+				4127D7F3215DDA9E00E7D732 /* MySetting.plist */,
 			);
 			path = Entrance;
 			sourceTree = "<group>";
@@ -1087,6 +1102,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4127D7F4215DDA9E00E7D732 /* MySetting.plist in Resources */,
 				41B47B35215C82BE00BFCA4C /* NotloginMineHeadView.xib in Resources */,
 				41E286EF2147BC9C000AB593 /* LaunchScreen.storyboard in Resources */,
 				41E286EC2147BC9C000AB593 /* Assets.xcassets in Resources */,
@@ -1094,6 +1110,7 @@
 				41B47B46215CD77500BFCA4C /* MoreLoginViewController.storyboard in Resources */,
 				41F3F9CA215B2607002A86B1 /* MyFirstSectionCell.xib in Resources */,
 				41F3F9F4215B6D10002A86B1 /* MyOtherCell.xib in Resources */,
+				4127D81F215E04E200E7D732 /* MySettingCell.xib in Resources */,
 				415803472148B1AF00D35CB2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1105,13 +1122,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4127D81B215DDD7400E7D732 /* MySettingTableViewController.swift in Sources */,
 				41F3F9C8215B2607002A86B1 /* MyFirstSectionCell.swift in Sources */,
 				415803492148B2C900D35CB2 /* MainBarController.swift in Sources */,
 				4158034D2148B36A00D35CB2 /* Const.swift in Sources */,
+				4127D81E215E04E200E7D732 /* MySettingCell.swift in Sources */,
 				4158034F2148B48D00D35CB2 /* UIColor+Extention.swift in Sources */,
 				41F3F9F3215B6D10002A86B1 /* MyOtherCell.swift in Sources */,
 				41F3F9CD215B2611002A86B1 /* MyCellModel.swift in Sources */,
 				415803552148E12C00D35CB2 /* MineViewController.swift in Sources */,
+				4127D819215DDC0C00E7D732 /* MySettingModel.swift in Sources */,
 				4158035D214906FA00D35CB2 /* NetworkTool.swift in Sources */,
 				415803532148E0DE00D35CB2 /* HuoShanViewController.swift in Sources */,
 				415803462148B1AF00D35CB2 /* AppDelegate.swift in Sources */,

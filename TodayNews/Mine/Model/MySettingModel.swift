@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import HandyJSON
 
-class MySettingModel: NSObject {
 
+struct MySettingModel: HandyJSON {
+    var title :String = ""
+    var subtitle :String = ""
+    var rightTitle :String = ""
+    var isHiddenRightTitle :Bool = false
+    var isHiddenSubtitle :Bool = false
+    var isHiddenRightArraw :Bool = false
+    var isHiddenSwitch :Bool = false
 }
