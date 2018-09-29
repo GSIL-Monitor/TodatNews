@@ -19,6 +19,8 @@ protocol NetworkToolProtocol {
     static func loadMineModel(_ completionHandler:@escaping (_ mymodel:[[MyCellModel]])->())
     ///mine 关注
     static func loadMineConner(_ completionHandler:@escaping (_ attion :[MyConner])-> ())
+    ///offline
+    static func loadOfflineModel (_ completionHandler:@escaping (_ mymodel:[OfflineModel])->())
 
 }
 extension NetworkToolProtocol
@@ -78,6 +80,28 @@ extension NetworkToolProtocol
         }
         
     
+    }
+    
+    ///offline
+    static func loadOfflineModel (_ completionHandler:@escaping (_ mymodel:[OfflineModel])->())
+    {
+        var offlineArray = [OfflineModel]()
+        let BASE_URL = "https://is.snssdk.com"
+        let device_id: Int = 6096495334
+        let iid: Int = 5034850950
+        let url = BASE_URL + "/article/category/get_subscribed/v1/?device_id=" + "\(device_id)" + "?iid" + "\(iid)"
+        Alamofire.request(url).responseJSON { (response) in
+            let json = JSON(response.result.value!)
+            let data1 = json["data"]
+            if let data2 = data1["data"].arrayObject{
+                offlineArray += data2.flatMap({ item in
+                    OfflineModel.deserialize(from: item as? Dictionary)
+                })
+            }
+            completionHandler(offlineArray)
+            
+        }
+        
     }
 
 }

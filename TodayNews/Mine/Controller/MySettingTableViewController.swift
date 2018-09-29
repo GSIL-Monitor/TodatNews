@@ -53,6 +53,24 @@ class MySettingTableViewController: UITableViewController {
         
         return cell
         }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 1:
+            switch indexPath.row {
+            case 0:
+               let vc = OffLineViewController()
+                navigationController?.pushViewController(vc, animated: true)
+            default:
+                break
+            }
+            
+        default:
+            break
+        }
+        
+    }
+    
 
 }
 extension MySettingTableViewController
