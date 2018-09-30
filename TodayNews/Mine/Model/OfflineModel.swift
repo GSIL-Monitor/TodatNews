@@ -20,6 +20,8 @@ struct OfflineModel :HandyJSON{
     var concern_id:String = ""
     var type:Bool = false
     var icon_url:String = ""
+    var isSelected:Bool = false
+    
     
     
 }

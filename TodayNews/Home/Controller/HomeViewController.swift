@@ -8,11 +8,15 @@
 
 import UIKit
 
+
 class HomeViewController: UIViewController {
 
+    let mineTitleTable = MineTitleTable()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NetworkTool.loadOfflineModel { (response) in
+            self.mineTitleTable.insert(response)
+        }
         // Do any additional setup after loading the view.
         
         

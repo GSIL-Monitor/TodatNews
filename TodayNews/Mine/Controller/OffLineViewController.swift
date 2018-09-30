@@ -7,20 +7,20 @@
 //
 
 import UIKit
-import SQLite3
 
 class OffLineViewController: UITableViewController {
     
     var array = [OfflineModel]()
+    var mineTitleTable = MineTitleTable()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.ym_registerCell(cell: OfflineCell.self)
 
-        NetworkTool.loadOfflineModel { (response) in
-            self.array = response
-            self.tableView.reloadData()
-        }
+       array = mineTitleTable.getAll()
+        tableView.reloadData()
+        tableView.rowHeight = 40
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,8 +44,25 @@ class OffLineViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.ym_dequeueReusableCell(indexPath: indexPath) as OfflineCell
         cell.model = array[indexPath.row]
+        let model = array[indexPath.row]
+        let image = model.isSelected ? UIImage(named: "details_choose_ok_icon_15x15_"):UIImage(named: "details_choose_icon_15x15_")
+        cell.rightBtn.setImage(image, for: .normal)
 
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var model = array[indexPath.row]
+        model.isSelected = !model.isSelected
+        
+        let cell = tableView.cellForRow(at: indexPath) as! OfflineCell
+        let image = model.isSelected ? UIImage(named: "details_choose_ok_icon_15x15_"):UIImage(named: "details_choose_icon_15x15_")
+        cell.rightBtn.setImage(image, for: .normal)
+        
+        array[indexPath.row] = model
+        
+        mineTitleTable.update(model)
+        tableView.reloadRows(at: [indexPath], with: .none)
+        
     }
  
 
