@@ -1,0 +1,14 @@
+site_name: todaynews
+pages:
+- 索引: index.md
+- 首页: home.md
+- 视频: video.md
+- 小视频: huoshan.md
+- 我的: mine.md
+- 用户详情: user_detail.md
+- 用户详情动态]: dongtai.md
+- 微头条: weitoutiao.md
+- 主题颜色: theme.md
+
+theme: readthedocs
+
