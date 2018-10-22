@@ -9,16 +9,41 @@
 import UIKit
 
 
-class HomeViewController: UIViewController {
+extension HomeViewController {
+    func leftClick(_ sender :UIButton)
+    {
+        print("1")
+    }
+    func centerClick(_ sender :UIButton)
+    {
+        print("2")
+    }
+    func rightClick(_ sender :UIButton)
+    {
+        print("3")
+    }
+}
+class HomeViewController: UIViewController,MyNavHeaderViewDidDelegate {
+    
+    var header = MyNavHeaderView.loadViewFromNib()
+    
 
     let mineTitleTable = MineTitleTable()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
+        view.addSubview(header)
+        header.delegate = self
+        
         NetworkTool.loadOfflineModel { (response) in
             self.mineTitleTable.insert(response)
         }
         // Do any additional setup after loading the view.
-        
         
         ///dev
     }

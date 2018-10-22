@@ -21,6 +21,9 @@ protocol NetworkToolProtocol {
     static func loadMineConner(_ completionHandler:@escaping (_ attion :[MyConner])-> ())
     ///offline
     static func loadOfflineModel (_ completionHandler:@escaping (_ mymodel:[OfflineModel])->())
+    
+    
+    static func loadHomePageSuggest(_ complementHandler: ()->())
 
 }
 extension NetworkToolProtocol
@@ -31,7 +34,7 @@ extension NetworkToolProtocol
     {
         var title = [[MyCellModel]]()
         let BASE_URL = "https://is.snssdk.com"
-        let device_id: Int = 6096495334
+        let device_id: Int64 = 6096495334
         //        let iid: Int = 5034850950
         let url = BASE_URL + "/user/tab/tabs/?device_id=" + "\(device_id)"
         Alamofire.request(url).responseJSON { (response) in
@@ -66,7 +69,7 @@ extension NetworkToolProtocol
         
         var myconner = [MyConner]()
         let BASE_URL = "https://is.snssdk.com"
-        let device_id: Int = 6096495334
+        let device_id: Int64 = 6096495334
         let url = BASE_URL + "/concern/v2/follow/my_follow/?device_id=" + "\(device_id)"
         Alamofire.request(url).responseJSON { (response) in
             let json = JSON(response.result.value!)
@@ -87,8 +90,8 @@ extension NetworkToolProtocol
     {
         var offlineArray = [OfflineModel]()
         let BASE_URL = "https://is.snssdk.com"
-        let device_id: Int = 6096495334
-        let iid: Int = 5034850950
+        let device_id: Int64 = 6096495334
+        let iid: Int64 = 5034850950
         let url = BASE_URL + "/article/category/get_subscribed/v1/?device_id=" + "\(device_id)" + "?iid" + "\(iid)"
         Alamofire.request(url).responseJSON { (response) in
             let json = JSON(response.result.value!)
