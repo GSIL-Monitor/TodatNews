@@ -19,7 +19,8 @@ class MyNavHeaderView: UIView,NibLoadable {
     
     weak var delegate :MyNavHeaderViewDidDelegate?
     
-
+    @IBOutlet weak var centerBtn: UIButton!
+    
     @IBAction func leftClick(_ sender: UIButton) {
         delegate?.leftClick(sender)
        
@@ -37,5 +38,12 @@ class MyNavHeaderView: UIView,NibLoadable {
     override func awakeFromNib() {
         self.frame = CGRect(x: 0, y: 0, width: SCREENWIDTH, height: 64)
         super.awakeFromNib()
+        NetworkTool.homeSuggest { (_ dic) in
+            self.centerBtn .setTitle(dic, for: .normal)
+        }
+        NetworkTool.homeModel { (dic ) in
+            print(dic)
+        }
+        
     }
 }

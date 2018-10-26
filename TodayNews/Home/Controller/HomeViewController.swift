@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 extension HomeViewController {
     func leftClick(_ sender :UIButton)
     {
@@ -26,6 +27,9 @@ extension HomeViewController {
 class HomeViewController: UIViewController,MyNavHeaderViewDidDelegate {
     
     var header = MyNavHeaderView.loadViewFromNib()
+    var homeModel :NSArray?
+    
+    var title = SGPageTitleView
     
 
     let mineTitleTable = MineTitleTable()
@@ -40,8 +44,13 @@ class HomeViewController: UIViewController,MyNavHeaderViewDidDelegate {
         view.addSubview(header)
         header.delegate = self
         
+        
+        
         NetworkTool.loadOfflineModel { (response) in
             self.mineTitleTable.insert(response)
+        }
+        NetworkTool.homeModel { (response) in
+            self.homeModel = response as NSArray
         }
         // Do any additional setup after loading the view.
         
@@ -53,15 +62,5 @@ class HomeViewController: UIViewController,MyNavHeaderViewDidDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -75,6 +75,9 @@
                 <constraint firstItem="pz1-JR-xqc" firstAttribute="top" secondItem="ljM-Nl-UdQ" secondAttribute="top" id="vhr-er-z0n"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centerBtn" destination="WkV-vU-6Tc" id="vga-do-cvK"/>
+            </connections>
             <point key="canvasLocation" x="96" y="-291"/>
         </view>
     </objects>
